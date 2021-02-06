@@ -1,1 +1,26 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
 /* You can add global styles to this file, and also import other style files */
+
+
+.square{
+  @apply bg-gradient-to-r from-red-300 to-red-brand  shadow-inner
+  rounded-xl h-60 w-60 my-12 sm:my-12 md:my-16 lg:my-20 flex items-center justify-center ;
+}
+
+.square-content{
+  @apply bg-white rounded shadow-2xl px-2 flex flex-col items-center justify-center;
+  height: 75% ;
+  width: 75%  ;
+}
+
+@screen sm{
+  .square{
+      height: calc( 100vw / 5) ;
+      width: calc( 100vw / 5)  ;
+  }
+
+}
